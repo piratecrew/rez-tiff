@@ -6,7 +6,7 @@ include(ExternalProject)
 rez_find_packages(PREFIX pkgs AUTO)
 
 set(tiff_version ${TIFF_VERSION})
-set(url_tiff ftp://download.osgeo.org/libtiff/tiff-${tiff_version}.tar.gz)
+set(url_tiff http://download.osgeo.org/libtiff/tiff-${tiff_version}.tar.gz)
 
 if(${REZ_BUILD_INSTALL})
     set(install_cmd make install ${make_args})
