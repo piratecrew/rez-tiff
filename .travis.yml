@@ -8,6 +8,7 @@ env:
 
 before_install:
   - sudo apt-get -qq update
+  - sudo apt-get install nasm
 
 install:
   - git clone https://github.com/nerdvegas/rez.git
@@ -27,6 +28,7 @@ install:
   - git clone https://github.com/piratecrew/rez-jpeg.git
   - cd rez-jpeg
   - rez-build -i
+  - cd ..
 
 script:
   - sed -i s/version.*=.*/version=\"${VERSION}\"/ package.py
